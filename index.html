@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dashboard da Cantina</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside>
+    <div class="logo" aria-label="Logo Cantina Pro">
+      <div class="logo-icon" aria-hidden="true">C</div>
+      <div class="logo-text">
+        <h1>Cantina Pro</h1>
+        <span>Sistema de Gestão</span>
+      </div>
+    </div>
+    <nav role="navigation" aria-label="Menu principal">
+      <button class="active" type="button" aria-current="page" tabindex="0" aria-label="Visão Geral (Página atual)">
+        <svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13h3v-3H3v3zM10 17h3v-7h-3v7zM3 20h3v-3H3v3zM13 6h3V3h-3v3zM17 13h0M7 10h0M17 17h0M10 3h0M10 6h0"/></svg>
+        Visão Geral
+      </button>
+      <button type="button" tabindex="0" aria-label="Clientes">
+        <svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 10a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 1c-2 0-6 1-6 3v1h12v-1c0-2-4-3-6-3z"/></svg>
+        Clientes
+      </button>
+      <button type="button" tabindex="0" aria-label="Produtos">
+        <svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 16V6a3 3 0 0 1 6 0v10a3 3 0 0 1-6 0zM11 7h3l3 1v8l-3 1h-3"/></svg>
+        Produtos
+      </button>
+      <button type="button" tabindex="0" aria-label="Consumo">
+        <svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10H5M5 10L7 7M5 10L7 13"/></svg>
+        Consumo
+      </button>
+    </nav>
+  </aside>
+
+  <main role="main" aria-label="Dashboard da Cantina">
+    <h2>Dashboard da Cantina</h2>
+    <p class="subtitle">Gerencie clientes, produtos e vendas da sua cantina</p>
+
+    <section class="summary-cards" aria-label="Resumo geral">
+      <article class="summary-card" aria-labelledby="client-label client-val client-pct">
+        <div class="summary-info">
+          <small id="client-label">Clientes</small>
+          <strong id="client-val">3</strong>
+          <span class="pct-change" id="client-pct">+12% vs mês anterior</span>
+        </div>
+        <div class="summary-icon" aria-hidden="true">
+          <svg  viewBox="0 0 20 20"><path stroke-linecap="round" stroke-linejoin="round" d="M10 10a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 1c-2 0-6 1-6 3v1h12v-1c0-2-4-3-6-3z"/></svg>
+        </div>
+      </article>
+
+      <article class="summary-card" aria-labelledby="product-label product-val product-pct">
+        <div class="summary-info">
+          <small id="product-label">Produtos</small>
+          <strong id="product-val">3</strong>
+          <span class="pct-change" id="product-pct">+5% vs mês anterior</span>
+        </div>
+        <div class="summary-icon" aria-hidden="true">
+          <svg  viewBox="0 0 20 20"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l6 4 6-4V6l-6-4-6 4v6z"/></svg>
+        </div>
+      </article>
+
+      <article class="summary-card" aria-labelledby="sales-label sales-val sales-pct">
+        <div class="summary-info">
+          <small id="sales-label">Vendas</small>
+          <strong id="sales-val">2</strong>
+          <span class="pct-change" id="sales-pct">+23% vs mês anterior</span>
+        </div>
+        <div class="summary-icon" aria-hidden="true">
+          <svg  viewBox="0 0 20 20"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h14M13 10v5M17 10v3"/></svg>
+        </div>
+      </article>
+
+      <article class="summary-card" aria-labelledby="revenue-label revenue-val revenue-pct">
+        <div class="summary-info">
+          <small id="revenue-label">Receita</small>
+          <strong id="revenue-val">R$ 22.00</strong>
+          <span class="pct-change" id="revenue-pct">+18% vs mês anterior</span>
+        </div>
+        <div class="summary-icon" aria-hidden="true">
+          <svg  viewBox="0 0 20 20"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12l4 4 8-8"/></svg>
+        </div>
+      </article>
+    </section>
+
+    <section class="sections">
+
+      <section class="card" aria-labelledby="transactions-title" tabindex="0" role="region">
+        <h3 id="transactions-title">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 11c1 0 2-1 2-2s-1-2-2-2h-2M3 7v6a3 3 0 0 0 3 3h8"/></svg>Transações Recentes
+        </h3>
+        <div class="transactions-list" aria-live="polite" aria-relevant="additions">
+          <article class="transaction" tabindex="0">
+            <div class="transaction-info">
+              <strong>Maria Santos</strong>
+              <small>Suco de Laranja</small>
+            </div>
+            <div class="transaction-value" aria-label="Valor R$ 5.00, quantidade 1">
+              <span>R$ 5.00</span>
+              <small>1x</small>
+            </div>
+          </article>
+          <article class="transaction" tabindex="0">
+            <div class="transaction-info">
+              <strong>João Silva</strong>
+              <small>Sanduíche Natural</small>
+            </div>
+            <div class="transaction-value" aria-label="Valor R$ 17.00, quantidade 2">
+              <span>R$ 17.00</span>
+              <small>2x</small>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="bestclients-title" tabindex="0" role="region">
+        <h3 id="bestclients-title">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 10a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 1c-2 0-6 1-6 3v1h12v-1c0-2-4-3-6-3z"/></svg>Melhores Clientes
+        </h3>
+        <div class="clients-list" aria-live="polite" aria-relevant="additions">
+          <article class="client-item" tabindex="0">
+            <div class="client-info">
+              <div class="client-rank" aria-label="Primeiro">1</div>
+              <div class="client-text">
+                <strong>João Silva</strong>
+                <small>Saldo: R$ 150.50</small>
+              </div>
+            </div>
+            <div class="client-value" aria-label="Gastos R$ 17.00">
+              R$ 17.00
+              <small>gastos</small>
+            </div>
+          </article>
+          <article class="client-item" tabindex="0">
+            <div class="client-info">
+              <div class="client-rank" aria-label="Segundo">2</div>
+              <div class="client-text">
+                <strong>Maria Santos</strong>
+                <small>Saldo: R$ 89.30</small>
+              </div>
+            </div>
+            <div class="client-value" aria-label="Gastos R$ 5.00">
+              R$ 5.00
+              <small>gastos</small>
+            </div>
+          </article>
+          <article class="client-item" tabindex="0">
+            <div class="client-info">
+              <div class="client-rank" aria-label="Terceiro">3</div>
+              <div class="client-text">
+                <strong>Pedro Costa</strong>
+                <small>Saldo: R$ 200.00</small>
+              </div>
+            </div>
+            <div class="client-value" aria-label="Gastos R$ 0.00">
+              R$ 0.00
+              <small>gastos</small>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="lowstock-title" tabindex="0" role="region">
+        <h3 id="lowstock-title">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l6 4 6-4V6l-6-4-6 4v6z"/></svg>Estoque Baixo
+        </h3>
+        <div class="low-stock" aria-live="polite">
+          Todos os produtos com estoque adequado
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="popular-title" tabindex="0" role="region">
+        <h3 id="popular-title">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12l4 4 8-8"/></svg>Produtos Populares
+        </h3>
+        <div class="popular-list" aria-live="polite" aria-relevant="additions">
+          <article class="popular-item" tabindex="0">
+            <div class="popular-left">
+              <div class="popular-rank" aria-label="Primeiro">1</div>
+              <div class="popular-info">
+                <strong>Sanduíche Natural</strong>
+                <small>R$ 8.50</small>
+              </div>
+            </div>
+            <div class="popular-right">
+              <span class="popular-sales" aria-label="2 vendas">2 vendas</span>
+              <span class="popular-tag">Lanches</span>
+            </div>
+          </article>
+          <article class="popular-item" tabindex="0">
+            <div class="popular-left">
+              <div class="popular-rank" aria-label="Segundo">2</div>
+              <div class="popular-info">
+                <strong>Suco de Laranja</strong>
+                <small>R$ 5.00</small>
+              </div>
+            </div>
+            <div class="popular-right">
+              <span class="popular-sales" aria-label="1 vendas">1 vendas</span>
+              <span class="popular-tag">Bebidas</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </section>
+  </main>
+</body>
+</html>
+
